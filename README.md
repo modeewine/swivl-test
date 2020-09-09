@@ -8,12 +8,17 @@
 
 ### Installation
 
+Run commands:
 ```sh
 $ cd {project-dir}
 $ composer install
-$ php bin/console d:s:u --force
 ```
 where {project-dir} - directory where is project located.
+
+Configure `.env` (database connection) and run command:
+```sh
+$ php bin/console d:s:u --force
+```
 
 ### Request API Examples
 
