@@ -134,6 +134,7 @@ $ php bin/console d:s:u --force
     DELETE {base-url}/api/classroom/{id}
     ```
     Without request body
+    
     Response without content [204]
 
  - Classroom list with only names (*It for serialization groups example*)
