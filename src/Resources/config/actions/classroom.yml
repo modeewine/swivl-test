@@ -1,0 +1,47 @@
+services:
+    app.action.classroom.create:
+        class: App\Action\CreateAction
+        arguments:
+            - App\Entity\Classroom
+            - App\Form\Classroom\ClassroomType
+        tags: ['controller.service_arguments']
+
+    app.action.classroom.update:
+        class: App\Action\UpdateAction
+        arguments:
+            - App\Entity\Classroom
+            - App\Form\Classroom\ClassroomEditType
+        tags: ['controller.service_arguments']
+
+    app.action.classroom.delete:
+        class: App\Action\DeleteAction
+        arguments:
+            - App\Entity\Classroom
+        tags: ['controller.service_arguments']
+
+    app.action.classroom.fetch:
+        class: App\Action\FetchAction
+        arguments:
+            - App\Entity\Classroom
+        tags: ['controller.service_arguments']
+
+    app.action.classroom.list:
+        class: App\Action\ListAction
+        arguments:
+            - App\Entity\Classroom
+        tags: ['controller.service_arguments']
+
+    app.action.classroom.list.names:
+        class: App\Action\ListAction
+        arguments:
+            - App\Entity\Classroom
+        calls:
+            - ['setOption', [!php/const App\Action\BaseActionAbstract::SERIALIZATION_GROUPS, ['name']]]
+        tags: ['controller.service_arguments']
+
+    app.action.classroom.active.update:
+        class: App\Action\UpdateAction
+        arguments:
+            - App\Entity\Classroom
+            - App\Form\Classroom\ClassroomActiveEditType
+        tags: ['controller.service_arguments']

@@ -1,0 +1,11 @@
+services:
+    app.listener.exception:
+        class: App\EventListener\ExceptionListener
+        parent: exception_listener
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+
+    app.listener.request.json.decoder:
+        class: App\EventListener\RequestJsonDecoderListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }

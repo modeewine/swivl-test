@@ -1,0 +1,42 @@
+app.classroom.create:
+    path: /classroom
+    methods: POST
+    controller: app.action.classroom.create:executeAction
+
+app.classroom.update:
+    path: /classroom/{id}
+    methods: PATCH
+    controller: app.action.classroom.update:executeAction
+    requirements:
+        id: '^\d+$'
+
+app.classroom.delete:
+    path: /classroom/{id}
+    methods: DELETE
+    controller: app.action.classroom.delete:executeAction
+    requirements:
+        id: '^\d+$'
+
+app.classroom.fetch:
+    path: /classroom/{id}
+    methods: GET
+    controller: app.action.classroom.fetch:executeAction
+    requirements:
+        id: '^\d+$'
+
+app.classroom.list:
+    path: /classroom
+    methods: GET
+    controller: app.action.classroom.list:executeAction
+
+app.classroom.list.names:
+    path: /classroom/names
+    methods: GET
+    controller: app.action.classroom.list.names:executeAction
+
+app.classroom.active.update:
+    path: /classroom/{id}/active
+    methods: PATCH
+    controller: app.action.classroom.active.update:executeAction
+    requirements:
+        id: '^\d+$'
