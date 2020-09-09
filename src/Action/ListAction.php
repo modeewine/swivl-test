@@ -15,12 +15,22 @@ class ListAction extends EntityActionAbstract
     /**
      * @param Request $request
      *
+     * @return array
+     */
+    protected function buildEntityCriteria(Request $request): array
+    {
+        return [];
+    }
+
+    /**
+     * @param Request $request
+     *
      * @return Response
      */
     public function executeAction(Request $request): Response
     {
-        $result = $this->getEntity([]);
+        $result = $this->provideEntities($request);
 
-        return $this->response(reset($result));
+        return $this->response($result);
     }
 }

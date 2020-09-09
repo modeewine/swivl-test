@@ -27,11 +27,15 @@ abstract class EntityActionAbstract extends BaseActionAbstract
     }
 
     /**
-     * @return ManagerRegistry
+     * @param Request $request
+     *
+     * @return array
      */
-    protected function getDoctrine(): ManagerRegistry
+    protected function buildEntityCriteria(Request $request): array
     {
-        return $this->get('doctrine');
+        $key = $this->options[self::SLUG_KEY];
+
+        return [$key => $request->get($key)];
     }
 
     /**
@@ -57,8 +61,6 @@ abstract class EntityActionAbstract extends BaseActionAbstract
      */
     protected function provideEntities(Request $request): array
     {
-        $key = $this->options[self::SLUG_KEY];
-
-        return $this->getEntities([$key => $request->get($key)]);
+        return $this->getEntities($this->buildEntityCriteria($request));
     }
 }
