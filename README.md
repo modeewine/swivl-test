@@ -30,6 +30,7 @@ $ php bin/console d:s:u --force
 ### Request API Examples
 
  - Classroom list
+   
    Request [GET]
     ```
     GET {base-url}/api/classroom
@@ -61,6 +62,7 @@ $ php bin/console d:s:u --force
     }
     ```
  - Classroom single fetch
+   
    Request [GET]
     ```
     GET {base-url}/api/classroom/{id}
@@ -75,6 +77,7 @@ $ php bin/console d:s:u --force
     }
     ```
  - Create classroom
+   
    Request [POST]
     ```
     POST {base-url}/api/classroom
@@ -96,6 +99,7 @@ $ php bin/console d:s:u --force
     }
     ```
  - Update classroom
+   
    Request [PATCH]
     ```
     PATCH {base-url}/api/classroom/{id}
@@ -116,6 +120,7 @@ $ php bin/console d:s:u --force
     }
     ```    
  - Update classroom active status
+   
    Request [PATCH]
     ```
     PATCH {base-url}/api/classroom/{id}/active
@@ -136,6 +141,7 @@ $ php bin/console d:s:u --force
     }
     ``` 
  - Delete classroom
+   
    Request [DELETE]
     ```
     DELETE {base-url}/api/classroom/{id}
