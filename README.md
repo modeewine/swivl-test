@@ -1,10 +1,17 @@
 # Swivl Test API App
 
+### Navigation
+
+ - [Requirements](#requirements)
+ - [Installation](#installation)
+ - [Request API Examples](#request-api-examples)
+
 ### Requirements
 
   - PHP >=7.4
   - MySQL >= 5.7
   - Composer >=1.7
+  - Pre-installed and configured web-server (or [Symfony Local Web Server](https://symfony.com/doc/current/setup/symfony_server.html))
 
 ### Installation
 
@@ -96,7 +103,7 @@ $ php bin/console d:s:u --force
     Request body [JSON]
     ```
     {
-      "name": "New name",
+      "name": "New name"
     }
     ``` 
     Response body [200]
@@ -116,7 +123,7 @@ $ php bin/console d:s:u --force
     Request body [JSON]
     ```
     {
-      "active": true,
+      "active": true
     }
     ``` 
     Response body [200]
@@ -149,13 +156,13 @@ $ php bin/console d:s:u --force
       "count": 3,
       "items": [
         {
-          "name": "First classroom",
+          "name": "First classroom"
         },
         {
-          "name": "Second classroom",
+          "name": "Second classroom"
         },
         {
-          "name": "One more classroom",
+          "name": "One more classroom"
         }
       ]
     }
